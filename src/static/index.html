@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore and register for extracurricular activities at Mergington High School." />
     <title>Mergington High School Activities</title>
     <link rel="stylesheet" href="styles.css" />
     <link
@@ -12,6 +13,9 @@
     />
   </head>
   <body>
+    <div class="announcement-banner" role="alert">
+  📢 Activity registration is open until the end of the month. Don't lose your spot!
+</div>
     <header>
       <h1>Mergington High School</h1>
       <h2>Extracurricular Activities</h2>
@@ -99,10 +103,10 @@
     </footer>
 
     <!-- Registration Modal -->
-    <div id="registration-modal" class="modal hidden">
+    <div id="registration-modal" class="modal hidden" role="dialog" aria-labelledby="registration-modal-title">
       <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <h3>Register for <span id="modal-activity-name"></span></h3>
+        <span class="close-modal" aria-label="Close modal">&times;</span>
+        <h3 id="registration-modal-title">Register for <span id="modal-activity-name"></span></h3>
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
@@ -115,10 +119,10 @@
     </div>
 
     <!-- Login Modal -->
-    <div id="login-modal" class="modal hidden">
+    <div id="login-modal" class="modal hidden" role="dialog" aria-labelledby="login-modal-title">
       <div class="modal-content">
-        <span class="close-login-modal">&times;</span>
-        <h3>Teacher Login</h3>
+        <span class="close-login-modal" aria-label="Close login modal">&times;</span>
+        <h3 id="login-modal-title">Teacher Login</h3>
         <form id="login-form">
           <div class="form-group">
             <label for="username">Username:</label>
